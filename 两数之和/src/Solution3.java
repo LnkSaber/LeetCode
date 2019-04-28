@@ -10,8 +10,8 @@ public class Solution3 {
         Map<Integer, Integer> map =new HashMap<>();
         for (int i = 0; i < nums.length; i++){
             int num = target - nums[i];
-            if (map.containsKey(num) && map.get(num) != i) {
-                return new int[] {i,map.get(num)};
+            if (map.containsKey(num) && map.get(num) != i+1) {
+                return new int[] {i+1,map.get(num)+1};
             }
             map.put(num,i);
         }
